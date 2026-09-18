@@ -20,7 +20,7 @@ Python, Pillow (thumbnails), Ollama + `llava` (local vision-model tagging).
 
 **Run**
 ```bash
-pip install -r requirements.txt
+pip install pillow    # only third-party dep — no requirements.txt in this repo. AI tagging calls Ollama's HTTP API directly (urllib), no ollama client package needed
 python run_catalog.py --preset plants --label plants           # fast catalog, no AI
 python run_catalog.py --preset plants --label plants --vision  # add AI tags (slow, ~5s/photo)
 python run_full.py                                              # detached full-drive build, both phases
